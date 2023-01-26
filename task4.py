@@ -22,12 +22,13 @@
 revenue = int(input('Введите выручку фирмы: '))
 costs = int(input('Введите издержки фирмы: '))
 staff = int(input('Введите численность сотрудников фирмы: '))
-if revenue > costs:
-    bacon = revenue - costs
-    print(f'Прибыль в этом месяце составила: {bacon}')
-    profit = bacon/revenue
-    print(f'Рентабельность выручки составила: {profit}')
-    bacon_staff = float(bacon/staff)
-    print(f'Прибыль фирмы в расчете на одного сотрудника составляет = {bacon_staff}')
+bacon = revenue - costs
+if bacon == 0: print('Выручка равна издержкам')
+elif revenue > costs:
+        print(f'Прибыль в этом месяце составила: {bacon}')
+        profit = bacon/revenue
+        print(f'Рентабельность выручки составила: {profit}')
+        bacon_staff = float(bacon/staff)
+        print(f'Прибыль фирмы в расчете на одного сотрудника составляет = {bacon_staff}')
 else:
     print('Организация убыточна')
